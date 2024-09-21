@@ -17,9 +17,8 @@ const EmailLink = () => {
         <div className="relative">
             <button
 
-                className="flex flex-col items-center text-gray-600 hover:text-gray-900"
-                onClick={(e) => {
-                    e.preventDefault();
+                className="flex flex-col items-center text-gray-600 hover:text-gray-500"
+                onClick={() => {
                     setIsLabelVisible(!isLabelVisible);
                 }}
             >

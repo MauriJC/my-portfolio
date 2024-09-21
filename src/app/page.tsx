@@ -12,17 +12,17 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Proyecto 1",
+      title: "Project 1",
       description: "Brief description of the project 1.",
       technologies: ["React", "Node.js", "MongoDB"],
     },
     {
-      title: "Proyecto 2",
+      title: "Project 2",
       description: "Brief description of the project 2.",
       technologies: ["Vue.js", "Express", "PostgreSQL"],
     },
     {
-      title: "Proyecto 3",
+      title: "Project 3",
       description: "Brief description of the project 3.",
       technologies: ["Angular", "Django", "MySQL"],
     },
@@ -47,7 +47,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen  bg-gray-950">
+    <div className="min-h-screen bg-gray-950">
 
       <main className="container mx-auto px-20 py-8">
         <section className="mb-16 flex flex-col items-center md:flex-row md:justify-between">
@@ -99,7 +99,7 @@ export default function Home() {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="rounded-full bg-blue-950 px-3 py-1 text-sm"
+                      className="rounded-full bg-blue-900 px-3 py-1 text-sm"
                     >
                       {tech}
                     </span>
@@ -110,13 +110,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sección de Redes Sociales */}
         <section>
-          <h2 className="mb-8 text-3xl font-bold">Let's connect!</h2>
+          <h2 className="mb-8 text-3xl font-bold text-center">Let&apos;s connect!</h2>
           <div className="flex justify-center space-x-6">
             <a
               href="https://github.com/MauriJC"
-              className="flex flex-col items-center text-gray-600 hover:text-gray-900"
+              className="flex flex-col items-center text-gray-600 hover:text-gray-500"
             >
               <Github className="h-8 w-8" />
               <span className="mt-1">GitHub</span>
@@ -124,7 +123,7 @@ export default function Home() {
 
             <a
               href="https://www.linkedin.com/in/mauriciojavierchaile/"
-              className="flex flex-col items-center text-gray-600 hover:text-gray-900"
+              className="flex flex-col items-center text-gray-600 hover:text-gray-500"
             >
               <Linkedin className="h-8 w-8" />
               <span className="mt-1">LinkedIn</span>

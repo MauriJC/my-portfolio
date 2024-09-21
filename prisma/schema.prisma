@@ -14,14 +14,27 @@ datasource db {
 }
 
 model Project {
-  id           Int            @id @default(autoincrement())
-  name         String
-  description  String
-  technologies Technologies[] @relation("ProjectTechnologies")
+  id              Int            @id @default(autoincrement())
+  name            String
+  description     String
+  longDescription String         @default("")
+  mainImagePath   String         @default("")
+  videoLink       String         @default("")
+  demoLink        String         @default("")
+  repoLink        String         @default("")
+  images          Image[]        @relation("ProjectImages")
+  technologies    Technologies[] @relation("ProjectTechnologies")
 }
 
 model Technologies {
   id       Int       @id @default(autoincrement())
   name     String
   projects Project[] @relation("ProjectTechnologies")
+}
+
+model Image {
+  id        Int     @id @default(autoincrement())
+  path      String
+  projectId Int
+  project   Project @relation("ProjectImages", fields: [projectId], references: [id])
 }
