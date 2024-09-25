@@ -11,8 +11,6 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
         include: { technologies: true, images: true }
     })
 
-    console.log(project?.images)
-
     if (!project) {
         return <div>Project not found!</div>
     }
@@ -54,11 +52,6 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
                     </div>
                 </div>
             )}
-
-
-
-
-
         </div>
     )
 }
