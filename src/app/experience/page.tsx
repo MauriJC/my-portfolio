@@ -20,7 +20,7 @@ const experienceData = {
             company: 'Freelance',
             date: 'August 2023 - December 2023',
             description: `Developed a client registration system for a local gym using web technologies (Django and JS). This project improved my skills in Python and JavaScript and helped the gym enhance its document management by reducing dependence on written records, thereby facilitating tracking of client payments.`,
-            logo: '/static/freelancelogo.jpg',
+            logo: '/static/FreelanceLogo.jpg',
         },
         {
             id: 3,
