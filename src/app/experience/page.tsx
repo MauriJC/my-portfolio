@@ -28,7 +28,7 @@ const experienceData = {
             company: 'Sovos',
             date: 'July 2022 – January 2023',
             description: `During my internship, I performed manual testing and learned the basics of automated testing using Cypress. This role also allowed me to get involved with SCRUM methodologies and extensively use tools like Zephyr, GIT, and JIRA.`,
-            logo: '/static/logo-sovos.png',
+            logo: '/static/Logo-Sovos.png',
         },
     ],
 };
