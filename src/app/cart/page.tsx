@@ -3,10 +3,19 @@ import { User } from "@prisma/client";
 
 export default async function Cart(): Promise<JSX.Element> {
 
-    const rows: User[] = await prisma.user.findMany();
+    let rows: User[] = [];
 
-    console.log(rows)
-    if (rows.length == 0) { return (<div>nothing here!</div>) }
+    try {
+        rows = await prisma.user.findMany();
+    } catch (error) {
+        console.error("Error fetching users:", error);
+        return <div>Error loading users.</div>;
+    }
+
+    if (rows.length === 0) {
+        return <div>Nothing here!</div>;
+    }
+
 
     return (
         <div>
