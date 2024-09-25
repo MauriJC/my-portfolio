@@ -48,7 +48,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
                     <h2 className="text-2xl font-semibold mb-4">Video demo</h2>
                     <div className="aspect-w-16 aspect-h-9">
                         <video controls className="w-full h-full rounded-lg">
-                            <source src={project.videoUrl} type="video/mp4" />
+                            <source src={project.videoLink} type="video/mp4" />
                             Tu navegador no soporta el tag de video.
                         </video>
                     </div>

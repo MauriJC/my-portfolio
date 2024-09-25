@@ -5,6 +5,7 @@ import Card from "@/components/ui/Card";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNode, faReact } from '@fortawesome/free-brands-svg-icons';
 import EmailLink from "@/components/EmailLink";
+import Link from "next/link";
 
 
 
@@ -12,20 +13,24 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "Brief description of the project 1.",
-      technologies: ["React", "Node.js", "MongoDB"],
+      id: 1,
+      title: "Claims and installations CRM",
+      description: "A CRM system developed to manage claims and installation requests for a telecommunications cooperative, utilizing technologies like React.js, Express, and PostgreSQL to streamline task management and improve operational efficiency.",
+      technologies: ["React.js", "Express", "PostgreSQL"],
     },
     {
-      title: "Project 2",
-      description: "Brief description of the project 2.",
-      technologies: ["Vue.js", "Express", "PostgreSQL"],
+      id: 2,
+      title: "Gym clients management system",
+      description: "A web-based system created for a local gym to register and manage client data, using Javascript, Django, and SQLite, allowing for better organization and tracking of client payments and attendance.",
+      technologies: ["Javascript", "Django", "SQLite"],
     },
+
     {
-      title: "Project 3",
-      description: "Brief description of the project 3.",
-      technologies: ["Angular", "Django", "MySQL"],
-    },
+      id: 3,
+      title: "GalenOS",
+      description: "An AI-powered application designed to identify respiratory diseases through machine learning algorithms, built with React, Django, and PostgreSQL, offering a tool for early detection and diagnosis.",
+      technologies: ["React", "Django", "PostgreSQL"],
+    }
   ]
 
   const skills = [
@@ -47,7 +52,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-950">
+    <div className="min-h-screen bg-gray-950" style={{ backgroundColor: '#0a0a0a' }}>
 
       <main className="container mx-auto px-20 py-8">
         <section className="mb-16 flex flex-col items-center md:flex-row md:justify-between">
@@ -90,12 +95,16 @@ export default function Home() {
 
         <section className="mb-16">
           <h2 className="mb-8 text-3xl font-bold">Main projects</h2>
-          <div className=" grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
-              <div key={index} className="rounded-lg bg-gray-900 p-6 shadow-md">
+              <div
+                key={index}
+                className="flex flex-col rounded-lg bg-gray-900 p-6 shadow-md h-full"
+              >
                 <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
                 <p className="mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
@@ -105,10 +114,19 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+
+                <div className="flex-grow"></div>
+
+                <Link href={`/projects/${project.id}`} className="flex justify-end">
+                  <button className="rounded-full bg-green-900 px-3 py-1 mr-2 text-sm mx-1 mb-2 hover:bg-green-600 transition duration-300">
+                    View more
+                  </button>
+                </Link>
               </div>
             ))}
           </div>
         </section>
+
 
         <section>
           <h2 className="mb-8 text-3xl font-bold text-center">Let&apos;s connect!</h2>
