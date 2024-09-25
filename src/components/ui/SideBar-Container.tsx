@@ -70,7 +70,7 @@ export const SidebarContainer = ({
                         <div className="mt-8 flex flex-col gap-2" >
                             {
                                 links.map((link, idx) => (
-                                    <SidebarLink rel={link.rel ? link.rel : null} target={link.target ? link.target : null} key={idx} link={link} />
+                                    <SidebarLink key={idx} link={link} />
                                 ))
                             }
 
