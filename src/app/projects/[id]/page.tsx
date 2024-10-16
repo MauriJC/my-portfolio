@@ -61,7 +61,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
                     </div>
                 </div>
                 <div className="flex justify-end">
-                    <a href='#' className='mx-2 bg-blue-900 rounded-full px-3 py-1 hover:bg-blue-700 transition duration-300'>View code</a>
+                    <a href={project.repoLink} target='blank' className='mx-2 bg-blue-900 rounded-full px-3 py-1 hover:bg-blue-700 transition duration-300'>View code</a>
                     <a href='#' className='mx-2 bg-blue-900 rounded-full px-3 py-1 hover:bg-blue-700 transition duration-300'>View demo</a>
                 </div>
             </div>
