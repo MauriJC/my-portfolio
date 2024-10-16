@@ -13,23 +13,26 @@ export default function Home() {
 
   const projects = [
     {
-      id: 1,
+      id: 13,
       title: "Claims and installations CRM",
       description: "A CRM system developed to manage claims and installation requests for a telecommunications cooperative, utilizing technologies like React.js, Express, and PostgreSQL to streamline task management and improve operational efficiency.",
       technologies: ["React.js", "Express", "PostgreSQL"],
+      imageSrc: "/static/projects/Claims/8/png"
     },
     {
-      id: 2,
+      id: 14,
       title: "Gym clients management system",
       description: "A web-based system created for a local gym to register and manage client data, using Javascript, Django, and SQLite, allowing for better organization and tracking of client payments and attendance.",
       technologies: ["Javascript", "Django", "SQLite"],
+      imageSrc: "/static/projects/Claims/8/png"
     },
 
     {
-      id: 3,
+      id: 15,
       title: "GalenOS",
       description: "An AI-powered application designed to identify respiratory diseases through machine learning algorithms, built with React, Django, and PostgreSQL, offering a tool for early detection and diagnosis.",
       technologies: ["React", "Django", "PostgreSQL"],
+      imageSrc: "/static/projects/Claims/8/png"
     }
   ]
 
@@ -134,6 +137,7 @@ export default function Home() {
             <a
               href="https://github.com/MauriJC"
               className="flex flex-col items-center text-gray-600 hover:text-gray-500"
+              target="blank"
             >
               <Github className="h-8 w-8" />
               <span className="mt-1">GitHub</span>
@@ -142,6 +146,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/mauriciojavierchaile/"
               className="flex flex-col items-center text-gray-600 hover:text-gray-500"
+              target="blank"
             >
               <Linkedin className="h-8 w-8" />
               <span className="mt-1">LinkedIn</span>
