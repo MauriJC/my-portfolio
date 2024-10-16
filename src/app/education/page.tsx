@@ -27,9 +27,11 @@ const EducationPage = () => {
                 id: 1,
                 title: "Digitalers: Data analytics course",
                 platform: "Educacion IT",
-                date: "2021",
+                date: "2024",
                 description: "Data analysis course, focused on SQL, Data visualization and Power BI.",
-                certificate: "https://example.com/certificate1"
+                certificate: "https://example.com/certificate1",
+                logo: "/static/EducacionITLogo.jpg",
+                institution: ""
             }
         ],
         selfTaught: [
@@ -89,18 +91,30 @@ const EducationPage = () => {
                     <h2 className="text-2xl font-semibold text-gray-300 mb-6">Courses & certifications</h2>
                     {educationData.courses.map((course) => (
                         <div key={course.id} className="bg-gray-900 shadow-md rounded-lg p-6 mb-6">
-                            <h3 className="text-xl font-semibold text-gray-200 mb-2">{course.title}</h3>
-                            <p className="text-gray-300 mb-1">{course.platform}</p>
-                            <p className="text-gray-300 mb-3">{course.date}</p>
+                            <div className="flex items-center mb-4">
+                                <Image
+                                    src={course.logo}
+                                    alt={`Logo de ${course.institution}`}
+                                    width={80}
+                                    height={80}
+                                    className="mr-4 bg-gray-300"
+                                />
+                                <div>
+                                    <h3 className="text-xl font-semibold text-gray-200 mb-2">{course.title}</h3>
+                                    <p className="text-gray-300 mb-1">{course.platform}</p>
+                                    <p className="text-gray-300 mb-3">{course.date}</p>
+                                </div>
+                            </div>
+
                             <p className="text-gray-300 mb-4">{course.description}</p>
-                            <a
+                            {/*            <a
                                 href={course.certificate}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
                             >
                                 Ver Certificado
-                            </a>
+                            </a> */}
                         </div>
                     ))}
                 </section>
