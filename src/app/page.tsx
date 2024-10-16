@@ -13,14 +13,14 @@ export default function Home() {
 
   const projects = [
     {
-      id: 13,
+      id: 14,
       title: "Claims and installations CRM",
       description: "A CRM system developed to manage claims and installation requests for a telecommunications cooperative, utilizing technologies like React.js, Express, and PostgreSQL to streamline task management and improve operational efficiency.",
       technologies: ["React.js", "Express", "PostgreSQL"],
       imageSrc: "/static/projects/Claims/8/png"
     },
     {
-      id: 14,
+      id: 13,
       title: "Gym clients management system",
       description: "A web-based system created for a local gym to register and manage client data, using Javascript, Django, and SQLite, allowing for better organization and tracking of client payments and attendance.",
       technologies: ["Javascript", "Django", "SQLite"],
