@@ -40,17 +40,17 @@ export default function Home() {
     {
       title: "PostgreSQL",
       icon: <Database className="h-12 w-12" />,
-      description: "Most used DBMS",
+      description: "The most widely used DBMS.",
     },
     {
       title: "Node.js",
       icon: <FontAwesomeIcon className="h-12 w-12" icon={faNode} />,
-      description: "Entorno de ejecución para crear aplicaciones de servidor escalables.",
+      description: "Runtime environment for building scalable server-side applications.",
     },
     {
       title: "React",
       icon: <FontAwesomeIcon className="h-12 w-12" icon={faReact} />,
-      description: "Biblioteca para construir interfaces de usuario interactivas y eficientes.",
+      description: "Library for building efficient and interactive user interfaces.",
     },
   ]
 
@@ -69,16 +69,17 @@ export default function Home() {
             />
           </div>
           <div className="md:w-2/3">
-            <h1 >Hello! I am</h1>
-            <h1 className="mb-2 text-4xl font-bold">
-              <Writer text="Mauricio Chaile" speed={50} />
+            <h1 className="text-4xl font-bold mb-4">
+              <Writer text="Hi, I' m Mauricio Chaile" speed={50} />
             </h1>
-            <p>
-              <Writer text="Fullstack JS developer" />
+            <p className="text-xl mb-2 font-bold">
+              <Writer text="Fullstack JavaScript Developer" speed={50} />
             </p>
-            <p className="text-xl">
-              <Writer text="Fullstack JS developer 
-              focused on creating innovative webs using the latest technologies that JS offers." speed={1} />
+            <p className="text-lg text-gray-100 leading-relaxed">
+              <Writer text=" I specialize in building modern, innovative web applications using cutting-edge JavaScript frameworks and tools like
+              React, Next.js, and Node.js. Passionate about delivering seamless user experiences and scalable server-side solutions."
+                speed={10} />
+
             </p>
           </div>
         </section>
