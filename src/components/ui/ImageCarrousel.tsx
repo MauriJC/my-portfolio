@@ -22,13 +22,20 @@ export function ImageCarousel({ images }: { images: Images[] }) {
     return (
         <div className="bg-gray-900 shadow-md rounded-lg p-6 mb-8">
             <div className="relative">
-                <Image
-                    src={images[currentImageIndex].path}
-                    alt={`Project image ${currentImageIndex + 1}`}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto rounded-lg"
-                />
+                <div className="relative w-full h-96">
+                    <Image
+                        src={images[currentImageIndex].path}
+                        alt={`Project image ${currentImageIndex + 1}`}
+                        fill
+                        style={{
+                            objectFit: 'contain',
+                            display: 'block',
+                            margin: 'auto',
+                        }}
+                        className="rounded-lg"
+                    />
+                </div>
+
                 <button
                     className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
                     onClick={prevImage}
