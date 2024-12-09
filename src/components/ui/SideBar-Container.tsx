@@ -42,7 +42,7 @@ export const SidebarContainer = ({
         },
         {
             label: 'Download CV',
-            href: '/static/Mauricio Javier Chaile CV.pdf',
+            href: '/static/CV Chaile Mauricio.pdf',
             icon: (
                 <FileText className="h-5 w-5 flex-shrink-0 text-neutral-700 dark:text-neutral-200" />
             ),
