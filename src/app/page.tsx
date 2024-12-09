@@ -52,7 +52,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen dark:bg-gray-950">
+    <div className="min-h-screen">
 
       <main className="container mx-auto px-20 py-8">
         <section className="mb-16 flex flex-col items-center md:flex-row md:justify-between">
