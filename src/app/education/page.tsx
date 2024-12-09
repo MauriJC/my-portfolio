@@ -56,18 +56,18 @@ const EducationPage = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto min-h-screen" style={{ backgroundColor: '#0a0a0a' }}>
+        <div className="max-w-7xl mx-auto min-h-screen">
 
 
             <div className="max-w-4xl mx-auto">
 
                 <GraduationCap className="h-8 w-8" />
-                <h1 className="text-4xl text-gray-300 mb-6 leading-nones content-center">My education</h1>
+                <h1 className="text-4xl dark:text-gray-300 mb-6 leading-nones content-center">My education</h1>
 
                 <section className="mb-12">
-                    <h2 className="text-2xl font-semibold text-gray-300 mb-6">Formal education</h2>
+                    <h2 className="text-2xl font-semibold dark:text-gray-300 mb-6">Formal education</h2>
                     {educationData.formalEducation.map((edu) => (
-                        <div key={edu.id} className="bg-gray-900 shadow-md rounded-lg p-6 mb-6">
+                        <div key={edu.id} className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-6">
                             <div className="flex items-center mb-4">
                                 <Image
                                     src={edu.logo}
@@ -77,20 +77,20 @@ const EducationPage = () => {
                                     className="mr-4 bg-gray-300"
                                 />
                                 <div>
-                                    <h3 className="text-xl font-semibold text-gray-300">{edu.degree}</h3>
-                                    <p className="text-gray-300">{edu.institution}</p>
-                                    <p className="text-gray-300">{edu.date}</p>
+                                    <h3 className="text-xl font-semibold dark:text-gray-300">{edu.degree}</h3>
+                                    <p className="dark:text-gray-300">{edu.institution}</p>
+                                    <p className="dark:text-gray-300">{edu.date}</p>
                                 </div>
                             </div>
-                            <p className="text-gray-200">{edu.description}</p>
+                            <p className="dark:text-gray-200">{edu.description}</p>
                         </div>
                     ))}
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-semibold text-gray-300 mb-6">Courses & certifications</h2>
+                    <h2 className="text-2xl font-semibold dark:text-gray-300 mb-6">Courses & certifications</h2>
                     {educationData.courses.map((course) => (
-                        <div key={course.id} className="bg-gray-900 shadow-md rounded-lg p-6 mb-6">
+                        <div key={course.id} className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-6">
                             <div className="flex items-center mb-4">
                                 <Image
                                     src={course.logo}
@@ -100,13 +100,13 @@ const EducationPage = () => {
                                     className="mr-4 bg-gray-300"
                                 />
                                 <div>
-                                    <h3 className="text-xl font-semibold text-gray-200 mb-2">{course.title}</h3>
-                                    <p className="text-gray-300 mb-1">{course.platform}</p>
-                                    <p className="text-gray-300 mb-3">{course.date}</p>
+                                    <h3 className="text-xl font-semibold dark:text-gray-200 mb-2">{course.title}</h3>
+                                    <p className="dark:text-gray-300 mb-1">{course.platform}</p>
+                                    <p className="dark:text-gray-300 mb-3">{course.date}</p>
                                 </div>
                             </div>
 
-                            <p className="text-gray-300 mb-4">{course.description}</p>
+                            <p className="dark:text-gray-300 mb-4">{course.description}</p>
                             {/*            <a
                                 href={course.certificate}
                                 target="_blank"
@@ -120,11 +120,11 @@ const EducationPage = () => {
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-semibold text-gray-300 mb-6">Self -taught</h2>
+                    <h2 className="text-2xl font-semibold dark:text-gray-300 mb-6">Self -taught</h2>
                     {educationData.selfTaught.map((course) => (
-                        <div key={course.id} className="bg-gray-900 shadow-md rounded-lg p-6 mb-6">
-                            <h3 className="text-xl font-semibold text-gray-200 mb-2">{course.title}</h3>
-                            <p className="text-gray-300 mb-4">{course.description}</p>
+                        <div key={course.id} className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-6">
+                            <h3 className="text-xl font-semibold dark:text-gray-200 mb-2">{course.title}</h3>
+                            <p className="dark:text-gray-300 mb-4">{course.description}</p>
                         </div>
                     ))}
                 </section>

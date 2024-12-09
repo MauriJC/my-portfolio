@@ -52,7 +52,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-950" style={{ backgroundColor: '#0a0a0a' }}>
+    <div className="min-h-screen dark:bg-gray-950">
 
       <main className="container mx-auto px-20 py-8">
         <section className="mb-16 flex flex-col items-center md:flex-row md:justify-between">
@@ -66,13 +66,13 @@ export default function Home() {
             />
           </div>
           <div className="md:w-2/3">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-4xl dark:text-gray-100 font-bold mb-4">
               <Writer text="Hi, I'm Mauricio Chaile" speed={50} />
             </h1>
             <p className="text-xl mb-2 font-bold">
               <Writer text="Fullstack JavaScript Developer" speed={50} />
             </p>
-            <p className="text-lg text-gray-100 leading-relaxed">
+            <p className="text-lg dark:text-gray-100 leading-relaxed">
               <Writer text=" I specialize in building modern, innovative web applications using cutting-edge JavaScript frameworks and tools like
               React, Next.js, and Node.js. Passionate about delivering seamless user experiences and scalable server-side solutions."
                 speed={10} />
@@ -95,12 +95,12 @@ export default function Home() {
         </section>
 
         <section className="mb-16">
-          <h2 className="mb-8 text-3xl font-bold">Main projects</h2>
+          <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-gray-100">Main projects</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="flex flex-col rounded-lg bg-gray-900 p-6 shadow-md h-full"
+                className="flex flex-col rounded-lg bg-gray-100 dark:bg-gray-900 p-6 shadow-md h-full"
               >
                 <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
                 <p className="mb-4">{project.description}</p>
@@ -109,7 +109,7 @@ export default function Home() {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="rounded-full bg-blue-900 px-3 py-1 text-sm"
+                      className="rounded-full bg-gray-300 dark:bg-blue-900 px-3 py-1 text-sm"
                     >
                       {tech}
                     </span>
@@ -119,7 +119,7 @@ export default function Home() {
                 <div className="flex-grow"></div>
 
                 <Link href={`/projects/${project.id}`} className="flex justify-end">
-                  <button className="rounded-full bg-green-900 px-3 py-1 mr-2 text-sm mx-1 mb-2 hover:bg-green-600 transition duration-300">
+                  <button className="rounded-full bg-blue-300 hover:bg-blue-400 dark:bg-green-900 px-3 py-1 mr-2 text-sm mx-1 mb-2 dark:hover:bg-green-600 transition duration-300">
                     View more
                   </button>
                 </Link>

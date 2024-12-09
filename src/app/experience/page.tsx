@@ -35,15 +35,15 @@ const experienceData = {
 
 const ExperiencePage = () => {
     return (
-        <div className="max-w-7xl mx-auto min-h-screen" style={{ backgroundColor: '#0a0a0a' }}>
+        <div className="max-w-7xl mx-auto min-h-screen">
             <div className="max-w-4xl mx-auto">
-                <Briefcase className="h-8 w-8 text-gray-300 mb-4" />
-                <h1 className="text-4xl text-gray-300 mb-6 leading-none content-center">My Experience</h1>
+                <Briefcase className="h-8 w-8 dark:text-gray-300 mb-4" />
+                <h1 className="text-4xl dark:text-gray-300 mb-6 leading-none content-center">My Experience</h1>
 
                 <section className="mb-12">
-                    <h2 className="text-2xl font-semibold text-gray-300 mb-6">Work Experience</h2>
+                    <h2 className="text-2xl font-semibold dark:text-gray-300 mb-6">Work Experience</h2>
                     {experienceData.workExperience.map((exp) => (
-                        <div key={exp.id} className="bg-gray-900 shadow-md rounded-lg p-6 mb-6">
+                        <div key={exp.id} className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-6">
                             <div className="flex items-center mb-4">
                                 <Image
                                     src={exp.logo}
@@ -53,12 +53,12 @@ const ExperiencePage = () => {
                                     className="mr-4 bg-gray-900"
                                 />
                                 <div>
-                                    <h3 className="text-xl font-semibold text-gray-300">{exp.position}</h3>
-                                    <p className="text-gray-300">{exp.company}</p>
-                                    <p className="text-gray-300">{exp.date}</p>
+                                    <h3 className="text-xl font-semibold dark:text-gray-300">{exp.position}</h3>
+                                    <p className="dark:text-gray-300">{exp.company}</p>
+                                    <p className="dark:text-gray-300">{exp.date}</p>
                                 </div>
                             </div>
-                            <p className="text-gray-200">{exp.description}</p>
+                            <p className="dark:text-gray-200">{exp.description}</p>
                         </div>
                     ))}
                 </section>

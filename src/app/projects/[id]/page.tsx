@@ -27,11 +27,11 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
 
         return (
             <div>
-                <p className="text-gray-100 mb-4">{generalDescription.trim()}</p>
+                <p className="dark:text-gray-100 mb-4">{generalDescription.trim()}</p>
                 {keyFeatures.length > 0 && (
                     <div>
-                        <h3 className="text-xl font-semibold text-gray-100 mb-2">Key features:</h3>
-                        <ul className="list-disc list-inside text-gray-100">
+                        <h3 className="text-xl font-semibold dark:text-gray-100 mb-2">Key features:</h3>
+                        <ul className="list-disc list-inside dark:text-gray-100">
                             {keyFeatures.map((feature, index) => (
                                 <li key={index}>{feature.trim()}</li>
                             ))}
@@ -43,10 +43,10 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto min-h-screen" style={{ backgroundColor: '#0a0a0a' }}>
-            <h1 className="text-4xl font-bold text-gray-100 mb-6">{project.name}</h1>
+        <div className="max-w-7xl mx-auto min-h-screen">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">{project.name}</h1>
 
-            <div className="bg-gray-900 shadow-md rounded-lg p-6 mb-8">
+            <div className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-8">
 
                 {formatDescription(project.longDescription)}
 
@@ -61,7 +61,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
                     </div>
                 </div>
                 <div className="flex justify-end">
-                    <a href={project.repoLink} target='blank' className='mx-2 bg-blue-900 rounded-full px-3 py-1 hover:bg-blue-700 transition duration-300'>View code</a>
+                    <a href={project.repoLink} target='blank' className='mx-2 bg-blue-300 hover:bg-blue-500 dark:bg-blue-900 rounded-full px-3 py-1 dark:hover:bg-blue-700 transition duration-300'>View code</a>
                     {/* <a href='#' className='mx-2 bg-blue-900 rounded-full px-3 py-1 hover:bg-blue-700 transition duration-300'>View demo</a> */}
                 </div>
             </div>
@@ -71,7 +71,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
             ) : 'Images not available'}
 
             {project.videoLink && (
-                <div className="bg-gray-900 shadow-md rounded-lg p-6">
+                <div className="dark:bg-gray-900 shadow-md rounded-lg p-6">
                     <h2 className="text-2xl font-semibold mb-4">Video demo</h2>
                     <div className="aspect-w-16 aspect-h-9">
                         <video controls className="w-full h-full rounded-lg">

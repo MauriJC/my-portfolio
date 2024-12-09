@@ -20,7 +20,7 @@ export function ImageCarousel({ images }: { images: Images[] }) {
     }
 
     return (
-        <div className="bg-gray-900 shadow-md rounded-lg p-6 mb-8">
+        <div className="bg-gray-100 dark:bg-gray-900 shadow-md rounded-lg p-6 mb-8">
             <div className="relative">
                 <div className="relative w-full h-96">
                     <Image

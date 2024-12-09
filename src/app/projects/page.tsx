@@ -36,9 +36,9 @@ const ProjectsPage = async () => {
     return (
 
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl text-white mb-8"> &lt; My projects /&gt;</h1>
+            <h1 className="text-4xl dark:text-white mb-8"> &lt; My projects /&gt;</h1>
             <h1>Welcome to the projects section!</h1>
-            <p>Here&apos;s a list of all the projects I did</p>
+            <p>Here&apos;s a list of all the projects I made</p>
             <Suspense fallback={<ProjectsSkeleton />}>
                 {projects.length === 0 ? (
                     <p>No projects found.</p>
@@ -47,7 +47,12 @@ const ProjectsPage = async () => {
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:border-2 hover:border-white  transition-transform duration-300 hover:scale-105 transition-transform duration-300"
+                                className="  bg-gray-100 dark:bg-gray-900
+                                border-2 border-slate-300 dark:border-0 dark:hover:border-white 
+                                rounded-lg
+                                shadow-md hover:shadow-lg
+                                hover:border-2 
+                                transition-transform duration-300 hover:scale-105"
                             >
                                 <Image
                                     src={project.mainImagePath}
@@ -57,14 +62,14 @@ const ProjectsPage = async () => {
                                     className="w-full h-48 object-cover"
                                 />
                                 <div className="p-6">
-                                    <h2 className="text-2xl font-semibold text-zinc-300 mb-2">{project.name}</h2>
-                                    <p className="text-gray-100">{project.description}</p>
+                                    <h2 className="text-2xl font-semibold dark:text-zinc-300 mb-2">{project.name}</h2>
+                                    <p className="dark:text-gray-100">{project.description}</p>
                                 </div>
-                                <div className="flex flex-wrap">
+                                <div className="flex flex-wrap ml-4">
                                     {project.technologies.map((tech) => (
                                         <span
                                             key={tech.id}
-                                            className="rounded-full bg-blue-900 px-3 py-1 text-sm mx-1 mb-2"
+                                            className="rounded-full bg-gray-300 text-gray-900 dark:text-gray-100 dark:bg-blue-900 px-3 py-1 text-sm mx-1 mb-2"
                                         >
                                             {tech.name}
                                         </span>
@@ -74,7 +79,7 @@ const ProjectsPage = async () => {
                                 <Link href={`/projects/${project.id}`} className="flex justify-end">
                                     <span
 
-                                        className="rounded-full bg-green-900 px-3 py-1 mr-2 text-sm mx-1 mb-2 hover:bg-green-600 transition duration-300"
+                                        className="rounded-full mr-4 mt-2 bg-blue-300 hover:bg-blue-400 dark:bg-green-900 px-3 py-1 mr-2 text-sm mx-1 mb-2 dark:hover:bg-green-600 transition duration-300"
                                     >
                                         View project
                                     </span>
